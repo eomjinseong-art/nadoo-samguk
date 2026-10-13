@@ -10,6 +10,7 @@ import { IDIOMS } from "@/data/idioms";
 import { QUIZ } from "@/data/quiz";
 import { jsonLd, pageMetadata, websiteLd } from "@/lib/seo";
 import { SITE_NAME, SITE_NAME_EN, SITE_SUB, SITE_TAGLINE } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export const metadata = pageMetadata({ title: SITE_NAME, description: `${SITE_TAGLINE}. ${SITE_SUB}`, path: "/" });
 
@@ -48,6 +49,7 @@ export default function Home() {
           <Link href="/quiz" className="rounded-full border border-line px-4 py-2 text-ink hover:border-terra">퀴즈 풀기</Link>
         </div>
       </section>
+      <CoupangCard />
       <div className="dentil my-6 opacity-60" aria-hidden />
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {SECTIONS.map((s) => (
