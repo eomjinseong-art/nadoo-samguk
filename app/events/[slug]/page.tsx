@@ -11,6 +11,7 @@ import { eraBySlug } from "@/data/eras";
 import { EVENTS, eventBySlug } from "@/data/events";
 import { IDIOMS } from "@/data/idioms";
 import { articleLd, breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return EVENTS.map((e) => ({ slug: e.slug }));
@@ -66,6 +67,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
           </table>
         </div>
       </section>
+      <CoupangCard />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-ink">등장인물 · Characters</h2>
         <ul className="mt-2 flex flex-wrap gap-2 text-sm">
