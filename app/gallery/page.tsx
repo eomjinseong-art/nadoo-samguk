@@ -29,7 +29,7 @@ export default function GalleryPage() {
                 </div>
               )}
               <div className="p-3">
-                <p className="text-[10px] tracking-[0.14em] text-terra">AI 일러스트{g.image ? "" : " · 준비 중"}</p>
+                <p className="text-[10px] tracking-[0.14em] text-terra">AI 일러스트 · AI illustration</p>
                 <Link href={`/characters/${c.slug}`} className="font-serif text-lg text-ink hover:text-terra">{c.ko} <span className="text-sm text-muted">{c.hanja}</span></Link>
                 <p className="text-xs text-muted">{c.role}</p>
               </div>
