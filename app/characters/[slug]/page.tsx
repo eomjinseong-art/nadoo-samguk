@@ -10,6 +10,7 @@ import { EVENTS } from "@/data/events";
 import { characterTreeHref } from "@/data/family-tree";
 import { ILLUSTRATED } from "@/data/gallery";
 import { breadcrumbLd, canonicalUrl, jsonLd, pageMetadata } from "@/lib/seo";
+import { NadooHubPersonLink } from "@/components/NadooHubLink";
 
 export function generateStaticParams() {
   return CHARACTERS.map((c) => ({ slug: c.slug }));
@@ -56,6 +57,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
           </ul>
         </section>
       ) : null}
+      <NadooHubPersonLink base="https://nadoo-samguk.vercel.app/characters/" slug={c.slug!} />
     </Page>
   );
 }
