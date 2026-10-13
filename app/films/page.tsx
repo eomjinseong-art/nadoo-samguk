@@ -5,6 +5,7 @@ import { PageHead } from "@/components/PageHead";
 import { FILMS } from "@/data/films";
 import { breadcrumbLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { MOVIE_CHECKLIST_URL } from "@/lib/site";
+import { NadooHubFilmsLink } from "@/components/NadooHubLink";
 
 const description = "삼국지 영화·드라마. 적벽대전 1·2(레드 클리프), 삼국지: 용의 부활, 삼국지: 명장 관우, 조조: 황제의 반란, 삼국(신삼국, 2010), 삼국연의(1994) 등. 어디까지가 소설이고 어디부터 창작인지 함께 적습니다.";
 export const metadata = pageMetadata({ title: "영화·드라마", description, path: "/films" });
@@ -32,6 +33,7 @@ export default function FilmsPage() {
           </li>
         ))}
       </ul>
+      <NadooHubFilmsLink />
     </Page>
   );
 }
