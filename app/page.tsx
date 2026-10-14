@@ -18,6 +18,7 @@ const SECTIONS = [
   { href: "/eras", en: "Eras", title: "여덟 시대", desc: `184년 황건부터 280년 진의 통일까지 ${ERAS.length}개 시대. 시대마다 «그때 한반도는?» 카드가 있습니다.` },
   { href: "/events", en: "Events", title: `사건 ${EVENTS.length}`, desc: "도원결의, 관도, 삼고초려, 적벽, 이릉, 출사표, 오장원. 줄거리와 정사 vs 연의 비교, 인물, 교훈." },
   { href: "/characters", en: "Characters", title: `인물 ${CHARACTERS.length}`, desc: "자(字), 생몰년, 정사의 모습과 소설의 모습을 나란히." },
+  { href: "/generals", en: "Generals", title: "장수 모아 보기", desc: "관우·장비·조운·장료·주유·여몽. 장군 벼슬을 지낸 장수를 나라별로 한눈에." },
   { href: "/factions", en: "Factions", title: "세력도", desc: "위·촉·오와 군웅, 사마씨. 누가 어디에 있었나." },
   { href: "/family-tree", en: "Family Trees", title: "가계도", desc: "조조·유비·손씨·사마씨·원씨, 그리고 요동 공손씨." },
   { href: "/maps", en: "Maps", title: "지도", desc: "190·200·209·222·263·280년의 세력 변화와 주요 전투 위치." },
