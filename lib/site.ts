@@ -41,6 +41,7 @@ export const NAV = [
   { href: "/eras", label: "시대" },
   { href: "/events", label: "사건" },
   { href: "/characters", label: "인물" },
+  { href: "/generals", label: "장수" },
   { href: "/factions", label: "세력도" },
   { href: "/family-tree", label: "가계도" },
   { href: "/maps", label: "지도" },
