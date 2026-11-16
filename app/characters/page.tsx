@@ -7,6 +7,8 @@ import { TagBadge } from "@/components/TagBadge";
 import { CHARACTERS, FACTIONS, charactersByFaction } from "@/data/characters";
 import type { Faction } from "@/data/types";
 import { breadcrumbLd, itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
+import { Fragment } from "react";
+import { CoupangCard } from "@/components/CoupangCard";
 
 const description = `삼국지 인물 ${CHARACTERS.length}명. 이름·한자·자(字)·생몰년과 함께 정사의 모습과 소설(연의)의 모습을 나란히 적은 인물 카드입니다.`;
 export const metadata = pageMetadata({ title: "인물", description, path: "/characters" });
@@ -19,8 +21,9 @@ export default function CharactersPage() {
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "인물" }]} />
       <PageHead kicker="CHARACTERS" title={`인물 ${CHARACTERS.length}`} lead={description} />
       <p className="mt-2 text-sm"><Link href="/factions" className="text-laurel underline underline-offset-4">세력도로 보기 →</Link></p>
-      {ORDER.map((f) => (
-        <section key={f} className="mt-10">
+      {ORDER.map((f, index) => (
+        <Fragment key={f}>
+        <section className="mt-10">
           <h2 className="font-serif text-2xl" style={{ color: FACTIONS[f].color }}>{FACTIONS[f].ko} <span className="text-sm text-muted">{FACTIONS[f].en}</span></h2>
           <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {charactersByFaction(f).map((c) => (
@@ -35,6 +38,8 @@ export default function CharactersPage() {
             ))}
           </ul>
         </section>
+        {index === 0 ? <CoupangCard /> : null}
+        </Fragment>
       ))}
     </Page>
   );
