@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -29,6 +30,7 @@ export default function SourcesPage() {
         <p><TagBadge tag="소설 각색" /> 『삼국지연의』에만 있거나, 소설이 주인공·순서·결과를 바꾼 장면.</p>
         <p><TagBadge tag="전해지는 이야기" /> 배송지 주·『세설신어』 같은 곳에만 있거나 기록끼리 엇갈려 확정하기 어려운 이야기.</p>
       </section>
+      <NadooAd inline />
       <ul className="mt-8 grid gap-4 md:grid-cols-2">
         {BOOKS.map((b) => (
           <li key={b.t} className="rounded-lg border border-line bg-card p-4">

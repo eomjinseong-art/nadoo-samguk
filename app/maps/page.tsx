@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -36,6 +37,7 @@ export default function MapsPage() {
           ))}
         </ul>
       </section>
+      <NadooAd inline />
       <section className="mt-12">
         <h2 className="font-serif text-2xl text-ink">세력 변화 · Factions over time</h2>
         <div className="mt-4 grid gap-6 lg:grid-cols-2">

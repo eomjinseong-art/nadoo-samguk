@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
 import { PageHead } from "@/components/PageHead";
@@ -13,6 +14,7 @@ export default function QuizPage() {
     <Page>
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "퀴즈" }]} />
       <PageHead kicker="QUIZ" title={`퀴즈 ${QUIZ.length}문제`} lead={description} />
+      <NadooAd inline />
       <QuizClient questions={QUIZ} cats={QUIZ_CATS} />
     </Page>
   );

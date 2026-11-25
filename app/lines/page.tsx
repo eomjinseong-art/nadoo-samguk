@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
 import { PageHead } from "@/components/PageHead";
@@ -14,6 +15,7 @@ export default function LinesPage() {
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "명대사" }]} />
       <PageHead kicker="FAMOUS LINES" title="명대사" lead={description} />
       <TagLegend />
+      <NadooAd inline />
       <p className="mt-2 text-xs text-muted">우리말은 이 사이트가 원문 뜻을 살려 옮긴 것입니다. 번역서 문장을 그대로 옮기지 않았습니다.</p>
       <ul className="mt-6 grid gap-4 md:grid-cols-2">
         {LINES.map((l) => (

@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
 import { JsonLd } from "@/components/JsonLd";
@@ -17,6 +18,7 @@ export default function FilmsPage() {
       <JsonLd data={jsonLd([breadcrumbLd([{ name: "홈", path: "/" }, { name: "영화·드라마", path: "/films" }]), ...sorted.map((f) => ({ "@type": f.kind === "영화" ? "Movie" : "TVSeries", name: f.ko, alternateName: [f.original, f.en], datePublished: String(f.year) }))])} />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "영화·드라마" }]} />
       <PageHead kicker="FILMS & DRAMAS" title="영화·드라마" lead={description} />
+      <NadooAd inline />
       <p className="mt-3 text-sm text-muted">
         «레드 클리프»는 «적벽대전»의 영어 제목이라 같은 작품입니다. 보고 나서 체크하려면{" "}
         <a href={`${MOVIE_CHECKLIST_URL}/?list=samguk`} target="_blank" rel="noopener noreferrer" className="text-laurel underline underline-offset-4">영화봇 체크리스트 · 삼국지</a>로.

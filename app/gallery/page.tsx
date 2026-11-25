@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -14,6 +15,7 @@ export default function GalleryPage() {
     <Page>
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "AI 그림" }]} />
       <PageHead kicker="AI ILLUSTRATIONS" title="AI 인물 그림" lead={description} />
+      <NadooAd inline />
       <p className="mt-3 rounded-md border border-terra/40 bg-terra/5 px-3 py-2 text-sm text-ink">모든 그림은 <strong>AI로 생성한 상상화(AI illustration)</strong>입니다. 3세기 인물의 얼굴은 전하지 않습니다. 옷차림은 한대 벽화·도용을 참고하도록 했습니다.</p>
       <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {ILLUSTRATED.map((g) => {

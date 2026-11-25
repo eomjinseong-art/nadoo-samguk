@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, Page } from "@/components/Card";
 import { PageHead } from "@/components/PageHead";
@@ -15,6 +16,7 @@ export default function ErasPage() {
       <JsonLd data={jsonLd([breadcrumbLd([{ name: "홈", path: "/" }, { name: "시대", path: "/eras" }]), itemListLd("삼국지 시대", "/eras", ERAS.map((e) => ({ name: e.title, path: `/eras/${e.slug}` })))])} />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "시대" }]} />
       <PageHead kicker="ERAS · 184–280" title="여덟 시대" lead={description} />
+      <NadooAd inline />
       <ol className="mt-8 space-y-4">
         {ERAS.map((era) => (
           <li key={era.slug} className="grid gap-3 md:grid-cols-[2fr_1fr]">

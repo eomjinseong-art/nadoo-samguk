@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -40,6 +41,7 @@ export default async function CharacterPage({ params }: { params: Promise<{ slug
         <Card kicker="정사 · Record" title="기록 속 모습">{c.record}</Card>
         <Card kicker="연의 · Novel" title="소설 속 모습">{c.novel}</Card>
       </div>
+      <NadooAd inline />
       <CoupangCard />
       <p className="mt-4 flex flex-wrap gap-4 text-sm">
         {tree ? <Link href={tree} className="text-laurel underline underline-offset-4">가계도에서 보기 →</Link> : null}

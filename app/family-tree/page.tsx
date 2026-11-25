@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Elsewhere } from "@/components/Elsewhere";
@@ -45,6 +46,7 @@ export default function FamilyTreePage() {
         title="가계도"
         lead="가문마다 나눈 그림입니다. 금색 실선은 혈연, 금색 점선은 양자, 장미색은 배우자, 보라색 점선은 기록이 갈리는 관계입니다. 칸을 누르면 부모·배우자·자녀·형제가 밝아집니다. 이름과 관계는 정사(진수 『삼국지』·『진서』) 기준이고, 소설에만 있는 관계는 넣지 않았습니다."
       />
+      <NadooAd inline />
       <SisterStrip title="다른 가족관계도" en="Other family trees" links={OTHER_FAMILY_TREES} />
       <FamilyTreeView />
 

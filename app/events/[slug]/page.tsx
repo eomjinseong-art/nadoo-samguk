@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -68,6 +69,7 @@ export default async function EventPage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
       <CoupangCard />
+      <NadooAd inline />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-ink">등장인물 · Characters</h2>
         <ul className="mt-2 flex flex-wrap gap-2 text-sm">

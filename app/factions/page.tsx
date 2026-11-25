@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -33,6 +34,7 @@ export default function FactionsPage() {
           <li key={t.year} className="rounded-md border border-line bg-card p-3"><span className="font-serif text-terra">{t.year}</span> <span className="text-ink">{t.text}</span></li>
         ))}
       </ol>
+      <NadooAd inline />
       <div className="mt-8 grid gap-4 lg:grid-cols-3">
         {MAIN.map((f) => <FactionBox key={f} f={f} />)}
       </div>

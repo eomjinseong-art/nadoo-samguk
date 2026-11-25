@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -20,6 +21,7 @@ export default function CharactersPage() {
       <JsonLd data={jsonLd([breadcrumbLd([{ name: "홈", path: "/" }, { name: "인물", path: "/characters" }]), itemListLd("삼국지 인물", "/characters", CHARACTERS.map((c) => ({ name: c.ko, path: `/characters/${c.slug}` })))])} />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "인물" }]} />
       <PageHead kicker="CHARACTERS" title={`인물 ${CHARACTERS.length}`} lead={description} />
+      <NadooAd inline />
       <p className="mt-2 text-sm"><Link href="/factions" className="text-laurel underline underline-offset-4">세력도로 보기 →</Link></p>
       {ORDER.map((f, index) => (
         <Fragment key={f}>

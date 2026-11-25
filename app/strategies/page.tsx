@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -14,6 +15,7 @@ export default function StrategiesPage() {
     <Page>
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "계책" }]} />
       <PageHead kicker="STRATEGIES" title="계책" lead={description} />
+      <NadooAd inline />
       <TagLegend />
       <ul className="mt-6 grid gap-4 md:grid-cols-2">
         {STRATEGIES.map((s) => (

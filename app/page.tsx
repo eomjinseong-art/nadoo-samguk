@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Card, Page } from "@/components/Card";
 import { JsonLd } from "@/components/JsonLd";
@@ -52,6 +53,7 @@ export default function Home() {
       </section>
       <CoupangCard />
       <div className="dentil my-6 opacity-60" aria-hidden />
+      <NadooAd inline />
       <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {SECTIONS.map((s) => (
           <Card key={s.href} href={s.href} kicker={s.en} title={s.title}>

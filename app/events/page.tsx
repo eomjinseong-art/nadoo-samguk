@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Card, Page } from "@/components/Card";
 import { JsonLd } from "@/components/JsonLd";
@@ -18,6 +19,7 @@ export default function EventsPage() {
       <JsonLd data={jsonLd([breadcrumbLd([{ name: "홈", path: "/" }, { name: "사건", path: "/events" }]), itemListLd("삼국지 사건", "/events", EVENTS.map((e) => ({ name: e.title, path: `/events/${e.slug}` })))])} />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "사건" }]} />
       <PageHead kicker="EVENTS" title={`사건 ${EVENTS.length}`} lead={description} />
+      <NadooAd inline />
       <TagLegend />
       {ERAS.map((era, index) => {
         const list = EVENTS.filter((e) => e.era === era.slug);
