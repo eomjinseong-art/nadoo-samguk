@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -39,6 +40,7 @@ export default async function EraPage({ params }: { params: Promise<{ slug: stri
         <p className="mt-2 text-sm leading-7 text-ink">{era.korea.body}</p>
         <p className="mt-2 text-xs text-muted">근거: {era.korea.source}</p>
       </section>
+      <NadooAd inline />
       <KoreaLinks />
       <h2 className="mt-10 font-serif text-2xl text-ink">이 시대의 사건</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

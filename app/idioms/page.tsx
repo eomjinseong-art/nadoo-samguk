@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -16,6 +17,7 @@ export default function IdiomsPage() {
       <JsonLd data={jsonLd([breadcrumbLd([{ name: "홈", path: "/" }, { name: "사자성어", path: "/idioms" }]), { "@type": "DefinedTermSet", name: "삼국지 사자성어", hasDefinedTerm: IDIOMS.map((i) => ({ "@type": "DefinedTerm", name: `${i.ko} ${i.hanja}`, description: i.meaning })) }])} />
       <Breadcrumbs items={[{ href: "/", label: "홈" }, { label: "사자성어" }]} />
       <PageHead kicker="IDIOMS" title={`사자성어 ${IDIOMS.length}`} lead={description} />
+      <NadooAd inline />
       <TagLegend />
       <p className="mt-2 text-xs text-muted">삼국지 출처가 아닌데 자주 함께 쓰이는 말은 «전해지는 이야기»로 두고 그 사실을 적었습니다.</p>
       <ul className="mt-6 grid gap-4 md:grid-cols-2">

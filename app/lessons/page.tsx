@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -25,6 +26,7 @@ export default function LessonsPage() {
           </li>
         ))}
       </ol>
+      <NadooAd inline />
       <h2 className="mt-12 font-serif text-2xl text-ink">사건별 한 줄 교훈</h2>
       <ul className="mt-4 divide-y divide-line rounded-lg border border-line bg-card text-sm">
         {EVENTS.map((e) => (

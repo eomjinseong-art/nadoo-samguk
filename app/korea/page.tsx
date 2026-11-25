@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Page } from "@/components/Card";
@@ -78,6 +79,7 @@ export default function KoreaPage() {
       <nav className="mt-4 flex flex-wrap gap-2 text-sm">
         {SECTIONS.map((s) => <a key={s.id} href={`#${s.id}`} className="rounded-full border border-line px-3 py-1 hover:border-terra">{s.title.split(",")[0]}</a>)}
       </nav>
+      <NadooAd inline />
       <aside className="mt-6 rounded-lg border border-[#2f4a6b]/30 bg-[#e7edf7] p-4 text-sm leading-7">
         더 읽기:{" "}
         <a href={`${KOREA_URL}/eras/three-kingdoms`} target="_blank" rel="noopener noreferrer" className="text-laurel underline underline-offset-4">대한민국이야기 · 삼국 시대</a>{" · "}

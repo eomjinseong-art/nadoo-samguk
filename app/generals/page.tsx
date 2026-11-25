@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CoupangCard } from "@/components/CoupangCard";
@@ -25,6 +26,7 @@ export default function GeneralsPage() {
         title="장수 모아 보기"
         lead={`인물 ${CHARACTERS.length}명 가운데 정사에서 장군·무관 벼슬을 지낸 ${GENERALS.length}명을 나라별로 모았습니다. 이름을 누르면 정사와 소설을 나란히 적은 인물 페이지로 갑니다. 소설 속 무용담은 인물 페이지에서 ‘소설’로 따로 구분합니다.`}
       />
+      <NadooAd inline />
       <p className="mt-4 flex flex-wrap gap-2 text-sm">
         <Link href="/events" className="rounded-full border border-line px-4 py-2 hover:border-terra">전투·사건</Link>
         <Link href="/films" className="rounded-full border border-line px-4 py-2 hover:border-terra">영화·드라마</Link>
